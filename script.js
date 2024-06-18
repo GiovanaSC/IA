@@ -7,35 +7,42 @@ const caixaResultado = document.querySelector ('.texto-resultado');
 
 const perguntas= [
         {
-            enunciado: "Qual o nome da praia mais famosa do Rio de Janeiro? ",
-            alternativa: [ "Praia de Ipanema",
-            "Praia de Copacabana"
+            enunciado: " Qual o nome do famoso compositor brasileiro conhecido como O Poeta da Liva? ",
+            alternativas: [ "Cartola",
+            "Noel Rosa"
             ]
     },
         {
-            enunciado: "pergunta 2",
-            alternativa: [ "Alternativa 1",
-            "Alternativa 2"
+            enunciado: "Em qual cidade do Brasil se encontra a famosa escola de samba Mangueira",
+            alternativas: [ "Rio de Janeiro",
+            "São Paulo"
             ]
     },
         {
-            enunciado: "pergunta 3",
-            alternativa: [ "Alternativa 1",
-            "Alternativa 2"
+            enunciado: "Qual instrumento é fundamental para acompanhar uma roda de samba?",
+            alternativas: [ "Cavaquinho",
+            "Pandeiro"
             ]
     },
         {
-            enunciado: "pergunta 4",
-            alternativa: [ "Alternativa 1",
-            "Alternativa 2"
+            enunciado: "Quem é considerado o mestre responsável por difundir a capoeira pelo Brasil e pelo mundo?",
+            alternativas: [ "Mestre Bimba",
+            "Mestre Suassuna"
             ]
     },
         {
-            enunciado: "pergunta 5",
-            alternativa: [ "Alternativa 1",
-            "Alternativa 2"
+            enunciado: "Em que período histórico a capoeira foi oficialmente reconhecida como esporte no Brasil?",
+            alternativas: [ "Década de 1970",
+            "Décacda de 1930"
             ]
     } // fecha objeto de perguntas
 ]; //fecha lista de perguntas
 
+let atual = 0;
+let perguntaAtual;
 
+function mostraPergunta(){
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+}
+mostraPergunta();
